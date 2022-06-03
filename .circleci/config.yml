@@ -3,7 +3,7 @@ version: 2.1
 executors:
   unity_exec:
     docker:
-      - image: gableroux/unity3d:2019.2.11f1-android
+      - image: unityci/editor:2019.4.39f1-android-1
     environment:
       BUILD_NAME: my_build_name
 
