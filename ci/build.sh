@@ -12,6 +12,8 @@ ${UNITY_EXECUTABLE:-xvfb-run --auto-servernum --server-args='-screen 0 640x480x2
   -projectPath $UNITY_DIR \
   -quit \
   -batchmode \
+  -username 287ilias@gmail.com \
+  -password Mfu08vjv \
   -nographics \
   -buildTarget $BUILD_TARGET \
   -customBuildTarget $BUILD_TARGET \
