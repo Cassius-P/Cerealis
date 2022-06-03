@@ -5,20 +5,18 @@ set -x
 
 echo "Building for $BUILD_TARGET"
 
-export BUILD_PATH=$UNITY_DIR/Builds/$BUILD_TARGET/
+export BUILD_PATH=./Builds/$BUILD_TARGET/
 mkdir -p $BUILD_PATH
 
 ${UNITY_EXECUTABLE:-xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/Unity/Editor/Unity} \
-  -projectPath $UNITY_DIR \
+  -projectPath $(pwd) \
   -quit \
   -batchmode \
-  -username 287ilias@gmail.com \
-  -password Mfu08vjv \
-  -nographics \
   -buildTarget $BUILD_TARGET \
   -customBuildTarget $BUILD_TARGET \
   -customBuildName $BUILD_NAME \
   -customBuildPath $BUILD_PATH \
+  -customBuildOptions AcceptExternalModificationsToPlayer \
   -executeMethod BuildCommand.PerformBuild \
   -logFile /dev/stdout
 
