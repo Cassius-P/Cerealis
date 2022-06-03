@@ -11,7 +11,6 @@ mkdir -p $BUILD_PATH
 ${UNITY_EXECUTABLE:-xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/Unity/Editor/Unity} \
   -projectPath $UNITY_DIR \
   -quit \
-  -batchmode \
   -username 287ilias@gmail.com \
   -password Mfu08vjv \
   -nographics \
