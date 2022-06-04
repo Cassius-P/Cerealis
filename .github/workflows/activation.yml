@@ -1,5 +1,6 @@
-name: Activation
-on: [push, pull_request]
+name: Build
+on:
+  workflow_dispatch: {}
 
 
 jobs:
@@ -16,5 +17,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ steps.getManualLicenseFile.outputs.filePath }}
-          path:
-            licenses
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+
